@@ -39,9 +39,9 @@ const Task: React.SFC<TaskProps> = ({task:{id,title,state},onArchiveTask,onPinTa
 
           <div className="actions" onClick={event => event.stopPropagation()}>
             {state !== 'TASK_ARCHIVED' && (
-              <a onClick={() => dispatch(pinTask(id))}>
+              <button onClick={() => dispatch(pinTask(id))}>
                 <span className={`icon-star`} />
-              </a>
+              </button>
             )}
           </div>
           
